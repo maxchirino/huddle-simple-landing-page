@@ -1,0 +1,149 @@
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+  --font-headings: 'Poppins', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+  --white: hsl(0, 0%, 100%);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(/images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  background-color: var(--violet);
+  line-height: 1.5;
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1300px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2.5rem;
+}
+
+h1 {
+  font-family: var(--font-headings);
+  font-size: 2.5rem;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.7rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Header */
+.header {
+  margin-bottom: 2rem;
+}
+
+.header img {
+  height: 3.5rem;
+}
+
+/* Cover */
+.cover {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.cover__text a {
+  font-size: 1.1rem;
+  font-family: var(--font-headings);
+  display: inline-block;
+  color: var(--violet);
+  background-color: var(--white);
+  padding: 0.9rem 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 0.5rem 1rem -0.5rem hsla(0, 0%, 0%, 0.8);
+  margin-bottom: 2rem;
+  transition: background-color ease-out 0.3s;
+}
+
+.cover__text a:hover {
+  color: var(--white);
+  background-color: var(--soft-magenta);
+}
+
+/* Social Media */
+.social-media {
+  text-align: right;
+}
+
+/* Exclude the first child from getting margin left */
+.social-media a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.social-media ion-icon {
+  color: var(--white);
+  font-size: 1.5rem;
+  padding: 0.5rem;
+  outline: 2px solid var(--white);
+  border-radius: 50%;
+  transition: all ease-out 0.3s;
+}
+
+.social-media ion-icon:hover {
+  color: var(--soft-magenta);
+  outline-color: var(--soft-magenta);
+}
+
+@media screen and (max-width: 1100px) {
+  body {
+    background-image: url(/images/bg-mobile.svg);
+  }
+
+  .header img {
+    height: 2.5rem;
+  }
+
+  .cover {
+    flex-direction: column;
+  }
+
+  .cover__text {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .cover__text h1 {
+    font-size: 1.8rem;
+  }
+
+  .cover__text a {
+    font-size: 1rem;
+    padding: 0.7rem 5rem;
+  }
+
+  .cover__image img {
+    width: 100%;
+  }
+
+  .social-media {
+    text-align: center;
+  }
+
+  .social-media ion-icon {
+    font-size: 1.2rem;
+  }
+}
